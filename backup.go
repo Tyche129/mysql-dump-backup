@@ -24,7 +24,7 @@ func Backup(cfg *Config) {
 		backupDatabase(cfg, db.Name, targetPath)
 	}
 
-	// 3. 清理一个月前的旧备份
+	// 3. 清理指定天数前的旧备份
 	cleanOldBackups(cfg.BackupPath, cfg.Clear)
 }
 
