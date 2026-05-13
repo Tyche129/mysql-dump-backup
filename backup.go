@@ -62,7 +62,7 @@ func backupDatabase(cfg *Config, dbName string, targetPath string) {
 		fmt.Println("备份失败:", dbName, err)
 		return
 	}
-	fmt.Println("备份成功:", filePath)
+	fmt.Printf("[%s] 备份数据库成功...: %s\n", time.Now().Format("15:04:05"), filePath)
 }
 
 // cleanOldBackups 用于删除指定目录下超过指定天数的文件或目录(根据mod时间而不是文件夹名字)
