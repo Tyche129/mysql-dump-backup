@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN apk add --no-cache git build-base
 
-RUN apk --no-cache add ca-certificates mariadb-client
+RUN apk --no-cache add ca-certificates mariadb-client tzdata
 
 ENV GO111MODULE=on \
     GOPROXY=https://goproxy.cn,direct \
