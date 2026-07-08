@@ -40,6 +40,7 @@ func backupDatabase(cfg *Config, dbName string, targetPath string) {
 		fmt.Sprintf("-p%s", cfg.MySQL.Password),
 		"--ssl=0",
 		"--single-transaction",
+		"--flush-privileges",
 		"--quick",
 		"--routines",
 		"--events",
