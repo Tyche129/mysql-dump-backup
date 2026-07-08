@@ -37,7 +37,10 @@ func main() {
 	fmt.Printf("🚀 服务启动成功！当前 Cron 表达式: [%s]\n", cfg.Cron)
 	fmt.Printf("当前时间: [%s]\n", time.Now())
 	fmt.Println(cfg.Des)
-
+	if cfg.Init == true {
+		fmt.Println("您已设置首次启动备份功能。")
+		Backup(cfg)
+	}
 	// 3. 设置信号监听以实现优雅关闭
 	// 创建一个通道来接收系统信号
 	quit := make(chan os.Signal, 1)

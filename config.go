@@ -13,6 +13,7 @@ type Config struct {
 	Cron       string     `yaml:"cron"`
 	Des        string     `yaml:"des"`
 	Clear      int        `yaml:"clear"`
+	Init       bool       `yaml:"init"`
 }
 
 type Database struct {
